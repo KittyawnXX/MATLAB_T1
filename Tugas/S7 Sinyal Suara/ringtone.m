@@ -86,3 +86,7 @@ base_freq = 261.63; % Frequency of C4
     sound(here, fs);
     pause(0.3); % Pause between notes
 
+% Ringtone file savings
+Filename= output_audio.wav
+y=[]
+audiowrite(Filename,y,fs)
