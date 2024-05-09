@@ -1,6 +1,60 @@
-% INDEX
 fs = 8000;
 t = 0:1/fs:0.25;
+
+% 1ST OCTAVE
+freq1 = [32.70, 36.71, 41.20, 43.65, 49.00, 55.00, 61.74];
+crash1 = [34.65, 38.89, 46.25, 51.91, 58.27,];
+
+c1 = sin(2*pi*freq1(1)*t);
+d1 = sin(2*pi*freq1(2)*t);
+e1 = sin(2*pi*freq1(3)*t);
+f1 = sin(2*pi*freq1(4)*t);
+g1 = sin(2*pi*freq1(5)*t);
+a1 = sin(2*pi*freq1(6)*t);
+b1 = sin(2*pi*freq1(7)*t);
+
+cc1 = sin(2*pi*crash1(1)*t);
+dc1 = sin(2*pi*crash1(2)*t);
+fc1 = sin(2*pi*crash1(3)*t);
+gc1 = sin(2*pi*crash1(4)*t);
+ac1 = sin(2*pi*crash1(5)*t);
+
+% 2ND OCTAVE
+freq2 = [65.41, 73.42, 82.41, 87.31, 98.00, 110.00, 123.47 ];
+crash2 = [69.30, 77.78, 92.50, 103.83, 116.54];
+
+c2 = sin(2*pi*freq2(1)*t);
+d2 = sin(2*pi*freq2(2)*t);
+e2 = sin(2*pi*freq2(3)*t);
+f2 = sin(2*pi*freq2(4)*t);
+g2 = sin(2*pi*freq2(5)*t);
+a2 = sin(2*pi*freq2(6)*t);
+b2 = sin(2*pi*freq2(7)*t);
+
+cc2 = sin(2*pi*crash2(1)*t);
+dc2 = sin(2*pi*crash2(2)*t);
+fc2 = sin(2*pi*crash2(3)*t);
+gc2 = sin(2*pi*crash2(4)*t);
+ac2 = sin(2*pi*crash2(5)*t);
+
+% 3RD OCTAVE
+freq3 = [130.81, 146.83, 164.81, 174.61, 196.00, 220.00, 246.94];
+crash3 = [138.59, 155.56, 185.00, 207.65, 233.08];
+
+c3 = sin(2*pi*freq3(1)*t);
+d3 = sin(2*pi*freq3(2)*t);
+e3 = sin(2*pi*freq3(3)*t);
+f3 = sin(2*pi*freq3(4)*t);
+g3 = sin(2*pi*freq3(5)*t);
+a3 = sin(2*pi*freq3(6)*t);
+b3 = sin(2*pi*freq3(7)*t);
+
+cc3 = sin(2*pi*crash3(1)*t);
+dc3 = sin(2*pi*crash3(2)*t);
+fc3 = sin(2*pi*crash3(3)*t);
+gc3 = sin(2*pi*crash3(4)*t);
+ac3 = sin(2*pi*crash3(5)*t);
+
 
 % 4TH OCTAVE
 freq4 = [262, 294, 330, 349, 392, 440, 494, 523];
@@ -81,12 +135,12 @@ nol = zeros(size(t));
 % Define the base frequency for C
 base_freq = 261.63; % Frequency of C4
 
-% Play Notes Here
-    here=[c4,c4,c4];
-    sound(here, fs);
-    pause(0.3); % Pause between notes
+% Put Your Tones on "Here" bracket
+here = [];
+sound(here, fs);
+pause(0.3); % Pause between notes
 
 % Ringtone file savings
-Filename= output_audio.wav
-y=[]
+Filename= output_audio.wav;
+y=[];
 audiowrite(Filename,y,fs)
